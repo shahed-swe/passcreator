@@ -3,12 +3,12 @@ import os
 
 
 def main():
-	print("Enter E to make easy type password")
-	print("Enter N to make normal type password")
-	print("Enter H to make hard type password")
-	print("To close the program press C")
-	choise = input("Enter your choise:")
 	while(1):
+		print("Enter E to make easy type password")
+		print("Enter N to make normal type password")
+		print("Enter H to make hard type password")
+		print("To close the program press C")
+		choise = input("Enter your choise:")
 		if choise == 'E' or choise == 'e':
 			easy()
 		elif choise == 'N' or choise == 'n':
@@ -20,7 +20,6 @@ def main():
 		else:
 			print("Wrong choise")
 			os.system("cls")
-			main()
 
 def easy():
 	password = input("Enter your password:")
@@ -53,6 +52,7 @@ def norm():
 
 
 def hard():
+	password = input("Enter your password:")
 	password = list(password)
 	password = '?'.join(password)
 	password = password[::-1]
